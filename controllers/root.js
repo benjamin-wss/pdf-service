@@ -12,8 +12,14 @@ router.get("/", (request, response) => {
   // #swagger.tags = ['Health Check']
   // #swagger.description = 'Just a page to serve JSON indicating that the service is up.'
   /* #swagger.responses[200] = {
-       schema: { $ref: "#/definitions/RootRouteHealthMessage" },
-       description: "Endpoint response"
+      description: "Endpoint response",
+      "content": {
+        "json": {
+          "schema": {
+            $ref: '#/definitions/RootRouteHealthMessage'
+          }
+        }
+      }
   } */
 
   response.status(200);
