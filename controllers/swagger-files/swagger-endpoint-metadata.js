@@ -22,6 +22,13 @@ const doc = {
         "if-none-match": 'W/"1d8-ENAZMuSXLDw7Ucb+eWDbRrDVC0Y"',
       },
     },
+    RemotePdfServingRequest: {
+      url: "https://www.sanlam.com/investmentseastafrica/Documents/Sanlam-Investments-East-Africa-June-2021.pdf",
+    },
+    RemotePdfServingBase64Response: {
+      response: 'base 64 string here',
+      mimeType: 'octet/stream'
+    }
   },
 };
 
