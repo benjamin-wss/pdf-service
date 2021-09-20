@@ -2,14 +2,20 @@
 
 const { default: Axios } = require("axios");
 
-module.exports = class FileDownloadRepository {
-  async DownloadFile({ url, responseType = 'arraybuffer' }) {
-    const response = Axios({
-      url,
-      method: "GET",
-      responseType
-    });
+const BaseClass = require("./_base-repo");
 
-    return response;
+module.exports = class FileDownloadRepository extends BaseClass {
+  async DownloadFile({ url, responseType = "arraybuffer" }) {
+    try {
+      const response = Axios({
+        url,
+        method: "GET",
+        responseType,
+      });
+
+      return response;
+    } catch (error) {
+      return super.Utilities.Axios.handleAxiosErrorWith404(error, true);
+    }
   }
 };

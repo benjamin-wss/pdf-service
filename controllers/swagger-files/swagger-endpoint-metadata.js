@@ -26,9 +26,33 @@ const doc = {
       url: "https://www.sanlam.com/investmentseastafrica/Documents/Sanlam-Investments-East-Africa-June-2021.pdf",
     },
     RemotePdfServingBase64Response: {
-      response: 'base 64 string here',
-      mimeType: 'octet/stream'
-    }
+      response: "base 64 string here",
+      mimeType: "octet/stream",
+    },
+    Error400GenericProd: {
+      status: 400,
+      message: "url must be a valid URL",
+    },
+    Error400DownloadDevl: {
+      stack:
+        "ValidationError: url must be a valid URL\n    at createError (D:\\devl\\skunk-works\\pdf-service\\node_modules\\yup\\lib\\util\\createValidation.js:54:21)\n    at D:\\devl\\skunk-works\\pdf-service\\node_modules\\yup\\lib\\util\\createValidation.js:72:107\n    at processTicksAndRejections (internal/process/task_queues.js:95:5)",
+      name: "ValidationError",
+      value: {
+        url: "not a url",
+      },
+      path: "url",
+      type: "url",
+      errors: ["url must be a valid URL"],
+      inner: [],
+      message: "url must be a valid URL",
+      params: {
+        value: "not a url",
+        originalValue: "not a url",
+        path: "url",
+        regex: {},
+      },
+      httpErrorCode: 400,
+    },
   },
 };
 

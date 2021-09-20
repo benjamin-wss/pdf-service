@@ -6,6 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "npm run swagger-autogen && node ./index.js",
+    "start:devl": "npm run swagger-autogen && env-cmd -e devl node ./index.js",
+    "start:prod": "npm run swagger-autogen && env-cmd -e prod node ./index.js",
     "swagger-autogen": "node swagger-generator.js"
   },
   "author": "",
@@ -23,5 +25,8 @@
     "swagger-autogen": "~2.11.2",
     "swagger-ui-express": "~4.1.6",
     "yup": "~0.32.9"
+  },
+  "devDependencies": {
+    "env-cmd": "^10.1.0"
   }
 }

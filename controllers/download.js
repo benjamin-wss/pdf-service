@@ -28,11 +28,31 @@ router.post(`/${prefix}/base64`, (request, response, next) => {
         }
   } */
   /* #swagger.responses[200] = {
-      description: 'User successfully obtained.',
+      description: 'File successfully downloaded.',
       "content": {
         "json": {
           "schema": {
             $ref: '#/definitions/RemotePdfServingBase64Response'
+          }
+        }
+      }
+  } */
+  /* #swagger.responses[400-Prod] = {
+      description: 'Error 400 in prod.',
+      "content": {
+        "json": {
+          "schema": {
+            $ref: '#/definitions/Error400GenericProd'
+          }
+        }
+      }
+  } */
+  /* #swagger.responses[400-Devl] = {
+      description: 'Error 400 in prod.',
+      "content": {
+        "json": {
+          "schema": {
+            $ref: '#/definitions/Error400DownloadDevl'
           }
         }
       }
