@@ -3,3 +3,6 @@ node_modules
 
 # log files
 npm-debug.log
+
+# ignore auto-generated seagger file
+controllers/swagger-files/swagger-output.json
